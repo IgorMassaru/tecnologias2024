@@ -1,4 +1,4 @@
-##  Inovações Tech 2024: Sua Busca por Tendências Tecnológicas! 
+##  Inovações Tech 2024: Sua Busca por Tendências Tecnológicas! - Imersão Dev com Google Gemini
 
 ### O que essa aplicação faz? 
 Essa aplicação é como um guia rápido para quem quer ficar por dentro das últimas novidades do mundo da tecnologia em 2024. 
