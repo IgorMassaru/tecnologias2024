@@ -28,20 +28,10 @@ Quer ajudar a gente a deixar a aplicação ainda mais incrível? Seja muito bem-
 * HTML
 * CSS
 * JavaScript
-* ... (adicione aqui as outras tecnologias utilizadas)
+
 
 **Contribuidores:**
-* ... (adicione aqui os nomes dos colaboradores)
-
-**Licença:**
-... (adicione aqui a licença utilizada)
-
-**Observações:**
-
-* **Personalize:** Adapte este README.md para o seu projeto, incluindo informações mais específicas sobre as tecnologias utilizadas, as funcionalidades da aplicação e como contribuir.
-* **Imagens:** Adicione imagens para ilustrar a aplicação e torná-la mais atraente.
-* **Vídeos:** Se tiver um vídeo demonstrando a aplicação, inclua o link aqui.
-* **Agradecimentos:** Agradeça aos colaboradores e a quem mais tiver contribuído para o projeto.
+* Alura e Google, pelo curso Imersão Dev com Google Gemini.
 
 **Lembre-se:** Um README.md bem escrito é fundamental para atrair novos colaboradores e usuários para o seu projeto. 
 
