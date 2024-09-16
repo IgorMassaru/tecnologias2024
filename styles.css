@@ -1,9 +1,109 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #151515; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor da fonte */
+    padding: 5px;
+    margin: 0; /* Remove todas as margens */
+    padding-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ocupa toda a largura da viewport */
+    z-index: 1;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px; /* Ajuste o tamanho da sua logo */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Alinha os itens do menu à direita */
+    align-items: center;
+    margin-right: 50px; /* Adiciona margem à direita para separar do conteúdo */
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav button {
+    color: #fff; /* Cor da fonte dos links */
+    font-size: 14px; /* Tamanho da fonte dos links */
+    text-transform: uppercase; /* Texto em letras maiúsculas */
+    font-weight: bold; /* Fonte em negrito */
+    background-color: #151515
+}
+
+.noticias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  
+  .noticia {
+    width: calc(50% - 20px); /* 2 colunas com espaçamento */
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    color: #222831; /* Cor do texto */
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 30px;
+    flex: 1 1 99px; /* Ocupa 1 parte, com tamanho mínimo de 300px */
+    margin: 10px;
+    
+  }
+  
+  .noticia img {
+    width: 50%;
+    height: auto;
+    float: left; /* Posiciona a imagem à esquerda */
+    margin-right: 50px;
+    height: center; /* A altura se ajusta automaticamente */
+    object-fit: cover; /* A imagem preenche todo o espaço disponível */
+  }
+  
+  .noticia-info {
+    margin-left: 20px; /* Espaçamento entre a imagem e o texto */
+  }
+  
+  .container {
+    width: 100vw; /* Contêiner com largura relativa à viewport */
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1; /* Conteúdo principal ocupa todo o espaço disponível */
+    overflow-y: auto;
+  }
+
 /* Importa a fonte Chakra Petch do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /* Estiliza o corpo da página */
 body {
-    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
+    background-image: url('innovation.png'); /* Substitua por seu caminho da imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    font-size: 16px; /* Define a fonte padrão */
     background-color: #0841fc; /* Cor de fundo da página */
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
@@ -12,14 +112,22 @@ body {
     height: 100vh; /* Preenche a altura total da viewport */
     margin: 0; /* Remove a margem padrão */
     padding: 0; /* Remove o padding padrão */
+    padding-top: 40;
+    min-height: 100vh;
+    overflow-y: auto;
 }
 
 /* Estiliza os títulos h1 */
 h1 {
-    font-size: 2.5rem; /* Tamanho da fonte */
+    font-size: 2em; /* Tamanho da fonte */
     color: #ffffff; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
+    background-color: #333; /* Cor de fundo do título */
+    padding: 20px; /* Espaçamento interno do título */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+    margin-top: 60px;
 }
 
 /* Estiliza as seções da página */
@@ -28,6 +136,7 @@ section {
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
     margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+    
 }
 
 /* Estiliza os inputs dentro das seções */
@@ -107,10 +216,15 @@ footer {
     color: #45474B; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     padding: 0; /* Espaçamento interno */
-    width: 100%; /* Largura total da página */
-    position: absolute; /* Posiciona o rodapé */
+    position: relative; /* Posiciona o rodapé */
     bottom: 0; /* Alinha ao fundo da página */
     font-size: 1rem; /* Tamanho da fonte */
+    margin: 0;
+    flex-shrink: 0; /* Garante que o rodapé não seja comprimido */
+
+    position: fixed;
+    left: 0;
+    width: 100vw;
 }
 
 @media (max-width: 768px) {
@@ -132,6 +246,13 @@ footer {
     .item-resultado h2 {
         font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
     }
+
+    .container {
+        width: 90vw;
+    }
+    .noticia {
+        flex: 1 1 100%; /* Em telas menores, as notícias ocupam toda a largura */
+      }
 }
 
 /* Responsividade para celulares */
@@ -163,4 +284,6 @@ footer {
     footer {
         font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
     }
+
+    
 }
